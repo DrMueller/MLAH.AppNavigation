@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@drmueller/ng-app-navigation": [
+        "dist/drmueller/ng-app-navigation"
+      ],
+      "@drmueller/ng-app-navigation/*": [
+        "dist/drmueller/ng-app-navigation/*"
+      ]
+    }
   }
 }

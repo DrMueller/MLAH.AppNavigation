@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AppNavigationInitializationService } from 'projects/drmueller/ng-app-navigation/src/lib/areas/services';
+import { AppNavigationEntry, AppNavigationConfiguration } from 'projects/drmueller/ng-app-navigation/src/lib/areas/models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  public constructor(appNavigationInitalizationSerice: AppNavigationInitializationService) {
+    appNavigationInitalizationSerice.initialize(new AppNavigationConfiguration(
+      'Hello test',
+      this.createSomeEntries()));
+  }
+
+  private createSomeEntries(): AppNavigationEntry[] {
+    return [
+      new AppNavigationEntry('Home', '/home', true),
+      new AppNavigationEntry('Individuals', '/individuals', true)
+    ];
+  }
 }
