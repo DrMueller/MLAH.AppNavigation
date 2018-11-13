@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
-import { AppNavigationInitializationService } from 'projects/drmueller/ng-app-navigation/src/lib/areas/services';
-import { AppNavigationEntry, AppNavigationConfiguration } from 'projects/drmueller/ng-app-navigation/src/lib/areas/models';
+
+import {
+  AppNavigationConfiguration
+} from 'projects/drmueller/ng-app-navigation/src/lib/areas/models/app-navigation-configuration.model';
+import {
+  AppNavigationEntry
+} from 'projects/drmueller/ng-app-navigation/src/lib/areas/models/app-navigation-entry.model';
+import {
+  AppNavigationInitializationService
+} from 'projects/drmueller/ng-app-navigation/src/lib/areas/services/app-navigation-initialization.service';
 
 @Component({
   selector: 'app-root',

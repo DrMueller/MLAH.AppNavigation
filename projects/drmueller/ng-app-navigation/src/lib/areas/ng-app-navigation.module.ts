@@ -2,8 +2,8 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import * as components from './components';
-import * as services from './services';
+import { AppNavigationComponent } from './components/app-navigation/app-navigation.component';
+import { AppNavigationInitializationService } from './services/app-navigation-initialization.service';
 
 import {
   MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule
@@ -20,11 +20,11 @@ import {
     CommonModule
   ],
   declarations: [
-    components.AppNavigationComponent
+    AppNavigationComponent
   ],
   exports: [
     RouterModule,
-    components.AppNavigationComponent
+    AppNavigationComponent
   ]
 })
 export class NgAppNavigationModule {
@@ -32,8 +32,8 @@ export class NgAppNavigationModule {
     return {
       ngModule: NgAppNavigationModule,
       providers: [
-        services.AppNavigationInitializationService
-      ],
+        AppNavigationInitializationService
+      ]
     };
   }
 }

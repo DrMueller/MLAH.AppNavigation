@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AppNavigationConfiguration } from '../models';
+import { AppNavigationConfiguration } from '../models/app-navigation-configuration.model';
 
 @Injectable({
   providedIn: 'root'

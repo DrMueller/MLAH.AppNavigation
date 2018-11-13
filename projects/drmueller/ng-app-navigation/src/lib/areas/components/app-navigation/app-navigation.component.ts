@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AppNavigationConfiguration, AppNavigationEntry } from '../../models';
-import { AppNavigationInitializationService } from '../../services';
+import { AppNavigationConfiguration } from '../../models/app-navigation-configuration.model';
+import { AppNavigationEntry } from '../../models/app-navigation-entry.model';
+import { AppNavigationInitializationService } from '../../services/app-navigation-initialization.service';
 
 import { AnimationServant } from './animations';
 
